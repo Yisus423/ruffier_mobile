@@ -11,3 +11,6 @@ wheels/
 
 # Database Files
 .dbsqlite3
+
+#Dveloper tools:
+dev.py
