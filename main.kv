@@ -1,0 +1,59 @@
+#:import txt_instruction instructions.txt_instruction
+
+<InstrScr>
+# Este es el Layout outer
+MDBoxLayout:
+    orientation:"vertical"
+    padding:"8dp"
+    spacing:"8dp"
+
+    MDLabel:
+        text: txt_instruction
+        style: "HeadlineSmall"
+
+    # lo que era line1:
+    MDBoxLayout:
+        size_hint: 0.8,None
+        height: "30sp"
+
+        #lbl1
+        MDLabel: #lbl1
+
+            text: "Ingresa tú nombre"
+            halign: "right"
+        
+        MDTextField:
+            id: in_name
+            multiline: False
+
+    # lo que era line2
+    MDBoxLayout:
+        size_hint: 0.8, None
+        height: "30sp"
+
+        #lbl2
+        MDLabel:
+
+            text:"Ingresa tu edad"
+            halign: "right"
+
+        MDTextField:
+            id: in_age
+            text: "7"
+            multiline: False
+
+    MDButton:
+        style:"elevated"
+        id: btn
+        pos_hint: {"center_x":0.5}
+        on_release: root.next()
+        size_hint: 0.3, 0.2
+        MDButtonText:
+            text: "Iniciar"
+
+
+
+
+
+
+
