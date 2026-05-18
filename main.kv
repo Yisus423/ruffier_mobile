@@ -4,56 +4,45 @@
 # Este es el Layout outer
 MDBoxLayout:
     orientation:"vertical"
-    padding:"8dp"
-    spacing:"8dp"
+    padding:"25dp"
+    spacing:"20dp"
 
     MDLabel:
         text: txt_instruction
         style: "HeadlineSmall"
+        halign: "center"
+        adaptative_height: True
 
-    # lo que era line1:
-    MDBoxLayout:
-        size_hint: 0.8,None
-        height: "30sp"
-
-        #lbl1
-        MDLabel: #lbl1
-
+    MDTextField:
+        id: in_name
+        multiline: False
+        mode:"filled"
+        size_hint_x: 0.9 # Un poco menos del 100% para que no toque los bordes
+        pos_hint: {"center_x": 0.5}
+        MDTextFieldHelperText:
             text: "Ingresa tú nombre"
-            halign: "right"
-        
-        MDTextField:
-            id: in_name
-            multiline: False
+            mode: "persistent"
+        MDTextFieldLeadingIcon:
+            icon:"account"
 
-    # lo que era line2
-    MDBoxLayout:
-        size_hint: 0.8, None
-        height: "30sp"
+    MDTextField:
+        id: in_age
+        text: "7"
+        multiline: False
+        mode:"filled"
+        size_hint_x: 0.9
+        pos_hint: {"center_x": 0.5}
+        MDTextFieldHelperText:
+            text: "Ingresa tú edad"
+            mode: "persistent"
+        MDTextFieldLeadingIcon:
+            icon:"account-clock"
 
-        #lbl2
-        MDLabel:
-
-            text:"Ingresa tu edad"
-            halign: "right"
-
-        MDTextField:
-            id: in_age
-            text: "7"
-            multiline: False
 
     MDButton:
         style:"elevated"
         id: btn
         pos_hint: {"center_x":0.5}
         on_release: root.next()
-        size_hint: 0.3, 0.2
         MDButtonText:
             text: "Iniciar"
-
-
-
-
-
-
-
